@@ -2,6 +2,7 @@ import React from 'react'
 import BootstrapCarousel from '../../BootstrapCarousel';
 import Container from 'react-bootstrap/Container'
 import Navbar from '../../Navbar';
+import Navigation from '../common/Navbar/Nav';
 
 const Home = () => {
     return (
@@ -15,7 +16,7 @@ const Home = () => {
           
           }}>
             <div className="App">
-                <Navbar></Navbar>
+                <Navigation />
 
                 <Container style={{padding:'40px'}}>
                     <BootstrapCarousel></BootstrapCarousel>

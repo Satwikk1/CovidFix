@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,9 +35,9 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
-.heading {
+.helper-heading {
   position: absolute;
   top: 10%;
   left: 44%;

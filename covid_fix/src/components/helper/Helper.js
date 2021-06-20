@@ -8,7 +8,7 @@ const Helper = () => {
     return (
         <div>
             <div className={"container text-center"} style={{minHeight: "100vh", paddingTop: "20%"}}>
-            <h1 className={"heading"}>CovidFix</h1>
+            <h1 className={"helper-heading"}>CovidFix</h1>
             <Button className={"mr-4"} href={"/home"} variant="outline-primary">Home</Button>{' '}
             <Button className={"mr-4"} href={"/health"} variant="outline-success">Health</Button>{' '}
             <Button className={"mr-4"} href={"/vaccine"} variant="outline-info">Vaccine</Button>{' '}
