@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.heading {
+  position: absolute;
+  top: 10%;
+  left: 44%;
+  font-family: "Open Sans", sans-serif;
+}

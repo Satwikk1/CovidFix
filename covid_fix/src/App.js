@@ -1,44 +1,23 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BootstrapCarousel from './BootstrapCarousel';
-import Container from 'react-bootstrap/Container'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import Home from './components/home/Home'
+import Health from './components/health/Health'
+import Vaccine from './components/vaccine/Vaccine'
+import Helper from './components/helper/Helper'
 
-import Navbar from './Navbar';
 
 function App() {
   return (
-
-    <div
-    style={{  
-      backgroundImage: "url(" + "https://cdn.pixabay.com/photo/2017/03/25/17/55/colorful-2174045__480.png" + ")",
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      height:'100vh',
-      padding:'0px'
-    
-    }}>
-    <div className="App">
-      <Navbar></Navbar>
-
-      <Container style={{padding:'40px'}}>
-
-        <BootstrapCarousel></BootstrapCarousel>
-
-        <hr
-        style={{
-            color: 'black',
-            backgroundColor: 'black',
-            height: 3
-        }}
-    />
-        
-      </Container>
-
-      <Container>
-        <a>Almost all the components have diff JS files</a>
-      </Container>
-    </div>
+    <div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={Helper} />
+          <Route path="/home" component={Home} />
+          <Route path="/health" component={Health} />
+          <Route path="/vaccine" component={Vaccine} />
+        </Switch>
+      </BrowserRouter>
     </div>
     
   );
