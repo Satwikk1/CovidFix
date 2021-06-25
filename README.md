@@ -18,6 +18,8 @@
 
 # Health
 <img src="https://github.com/Satwikk1/CovidFix/blob/main/images/3.jpeg">
+<img src="https://github.com/Satwikk1/CovidFix/blob/main/images/4.jpeg">
+
 
 Get all the info related to your healh, get to know about the prevention techniques and also get video excersices provided for your health.
 It provides you with:
@@ -25,6 +27,10 @@ It provides you with:
   - Corona Prevention Methods
   - Video Excersis
 
+# Vaccine
+
+<img src="https://github.com/Satwikk1/CovidFix/blob/main/images/5.jpeg">
+<img src="https://github.com/Satwikk1/CovidFix/blob/main/images/6.jpeg">
 
   
 # Packages
