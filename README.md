@@ -14,6 +14,8 @@
 
 # Home
 <img src="https://github.com/Satwikk1/CovidFix/blob/main/images/2.jpeg">
+<img src="https://github.com/Satwikk1/CovidFix/blob/main/images/7.jpeg">
+
 - Edit here
 
 # Health
