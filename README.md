@@ -16,14 +16,14 @@
 <img src="https://github.com/Satwikk1/CovidFix/blob/main/images/2.jpeg">
 <img src="https://github.com/Satwikk1/CovidFix/blob/main/images/7.jpeg">
 
-- Edit here
+With CovidFix, you get the basic information about Covid-19, like how Covid-19 virus is transmitted? And some basic prevention methods and common symptoms of an infected person. We particularly focus on Covid conditions of India. The current situation is analysed on the app numerically and it is updated regularly.
 
 # Health
 <img src="https://github.com/Satwikk1/CovidFix/blob/main/images/3.jpeg">
 <img src="https://github.com/Satwikk1/CovidFix/blob/main/images/4.jpeg">
 
 
-Get all the info related to your healh, get to know about the prevention techniques and also get video excersices provided for your health.
+Get all the info related to your health, get to know about the prevention techniques and also get video exercises provided for your health.
 It provides you with:
 
   - Corona Prevention Methods
