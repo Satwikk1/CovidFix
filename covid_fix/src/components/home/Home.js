@@ -1,40 +1,34 @@
-import React from 'react'
-import BootstrapCarousel from '../../BootstrapCarousel';
-import Container from 'react-bootstrap/Container'
+import { useState, useEffect } from 'react'
+
+import './Home.css';
+
 import Navbar from '../../Navbar';
-import Navigation from '../common/Navbar/Nav';
+import Footer from '../common/Footer/Footer';
+import Covid_Data_Header from './home_comp/Covid_Data_Header';
 
-const Home = () => {
-    return (
-        <div style={{  
-            backgroundImage: "url(" + "https://cdn.pixabay.com/photo/2017/03/25/17/55/colorful-2174045__480.png" + ")",
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            height:'100vh',
-            padding:'0px'
-          
-          }}>
-            <div className="App">
-                <Navigation />
+import { Header } from './home_comp/header';
+import { Prevention } from './home_comp/prevention';
+import { About } from './home_comp/about';
+import { Symptoms } from './home_comp/symptoms';
+import JsonData from './home_data.json';
 
-                <Container style={{padding:'40px'}}>
-                    <BootstrapCarousel></BootstrapCarousel>
-                    <hr
-                    style={{
-                        color: 'black',
-                        backgroundColor: 'black',
-                        height: 3
-                    }}
-                />
-                </Container>
+const App = () => {
+  const [landingPageData, setLandingPageData] = useState({})
+  useEffect(() => {
+    setLandingPageData(JsonData)
+  }, [])
 
-                <Container>
-                    <a>Almost all the components have diff JS files</a>
-                </Container>`
-            </div>
-        </div>
-    )
+  return (
+    <div>
+      <Navbar />
+      <Header data={landingPageData.Header} />
+      <Covid_Data_Header />
+      <Prevention data={landingPageData.Prevention} />
+      <About data={landingPageData.About} />
+      <Symptoms data={landingPageData.Symptoms} />
+      <Footer />
+    </div>
+  )
 }
 
-export default Home
+export default App

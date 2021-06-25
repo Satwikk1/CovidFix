@@ -1,0 +1,234 @@
+.Home {
+  text-align: center;
+}
+
+.Home-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Home-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.Home-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+  }
+
+.Home-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+body, html {
+	font-family: 'Open Sans', sans-serif;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	color: #777;
+	font-weight: 400;
+	width: 100% !important;
+	height: 100% !important;
+}
+h2, h3, h4 {
+	font-family: 'Raleway', sans-serif;
+}
+h2 {
+	text-transform: uppercase;
+	margin: 0 0 20px 0;
+	font-weight: 800;
+	font-size: 36px;
+	color: #333;
+}
+h3 {
+	font-size: 20px;
+	font-weight: 600;
+	color: #333;
+}
+h4 {
+	font-size: 18px;
+	color: #333;
+	font-weight: 600;
+}
+h5 {
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 20px;
+}
+p {
+	font-size: 15px;
+}
+p.intro {
+	margin: 12px 0 0;
+	line-height: 24px;
+}
+a {
+	color: #608dfd;
+	font-weight: 400;
+}
+a:hover, a:focus {
+	text-decoration: none;
+	color: #608dfd;
+}
+ul, ol {
+	list-style: none;
+}
+ul, ol {
+	padding: 0;
+	webkit-padding: 0;
+	moz-padding: 0;
+}
+hr {
+	height: 2px;
+	width: 70px;
+	text-align: center;
+	position: relative;
+	background: #1E7A46;
+	margin-bottom: 20px;
+	border: 0;
+}
+
+/* Header Section */
+.intro {
+	display: table;
+	width: 100%;
+	padding: 0;
+	background: url(https://www.emeraldgrouppublishing.com/sites/default/files/image/covid-cells.jpg) center center no-repeat;
+	background-color: #e5e5e5;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+.intro .overlay {
+	background: rgba(0,0,0,0.2);
+}
+.intro h1 {
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	font-size: 82px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-left: 50%;
+	margin-bottom: 10px;
+}
+.intro h1 span {
+	font-weight: 800;
+	color: #5ca9fb;
+}
+.intro p {
+	color: white;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 30px;
+	margin: 0 auto;
+	margin-left: 50%;
+	margin-bottom: 60px;
+}
+header .intro-text {
+	padding-top: 350px;
+	padding-bottom: 200px;
+	text-align: center;
+}
+
+/* prevention Section */
+#prevention {
+	padding: 100px 0;
+	background: #f6f6f6;
+}
+.prevention-img, .prevention-img img {
+	width: 64px;
+	height: 64px;
+	margin-bottom: 7px;
+}
+#prevention h2 {
+	margin-left: 25%;
+}
+
+/* About Section */
+#about {
+	padding: 100px 0;
+}
+#about h2 {
+	position: relative;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+}
+#about h2::after {
+	position: absolute;
+	content: "";
+	background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+	height: 4px;
+	width: 60px;
+	bottom: 0;
+	left: 0;
+}
+#about img {
+	width: 520px;
+	margin-top: 10px;
+	background: #fff;
+	border-right: 0;
+	box-shadow: 0 0 50px rgba(0,0,0,0.06);
+}
+#about p {
+	line-height: 24px;
+	margin: 30px 0;
+}
+
+/* symptoms Section */
+#symptoms {
+	padding: 100px 0;
+	background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+	color: #fff;
+}
+#symptoms h2 {
+	color: #fff;
+}
+#symptoms .section-title h2::after {
+	position: absolute;
+	content: "";
+	background: rgba(255,255,255,.3);
+	height: 4px;
+	width: 60px;
+	bottom: 0;
+	margin-left: -30px;
+	left: 50%;
+}
+.symptom-img, .symptom-img img {
+	width: 100px;
+	height: 100px;
+	margin-right: 7px;
+	background: linear-gradient(to right, #273cfd83 0%, #4255ffc2 100%);
+	border-radius: 40%;
+	color: #fff;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.329);
+}
+#symptoms h3 {
+	font-weight: 500;
+	padding: 5px 0;
+	color: #fff;
+}
+#symptoms p {
+	color: rgba(255,255,255,.75);
+}
+#symptoms .symptom-desc {
+	margin-bottom: 40px;
+}
