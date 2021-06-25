@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 import { useEffect } from 'react'
+import CountUp from 'react-countup'
 
 
 const VaccineStatus = (props) => {
@@ -41,29 +42,44 @@ const VaccineStatus = (props) => {
     return (
         <div>
             <div className="container app-header">
-                <h3 className="text-center">Vaccine</h3>
+                <h2 style={{color: 'white'}} className="text-center mt-3 pt-3">Vaccine</h2>
                 <div className="vaccine-card-body">
                     <div className="vaccine-card-box">
                         <h5 className="vaccine-card-box-heading">Daily</h5>
-                            {/* <h1>2923482</h1> */}
-                        <h1>{props.vaccineStatus.daily_vaccinations}</h1>
+                        <CountUp start={0} end={props.vaccineStatus.daily_vaccinations} delay={0}>
+                            {({ countUpRef }) => (
+                                <h1>
+                                    <span ref={countUpRef} />
+                                </h1>
+                            )}
+                        </CountUp>
                     </div>
+                    
                     <div className="vaccine-card-box">
                             <h5 className="vaccine-card-box-heading">Total</h5>
                             <div className="d-flex">
-                                <h1 className="vaccine-card-numbers">{props.vaccineStatus.total_vaccinations}</h1>
+                                <CountUp start={0} end={props.vaccineStatus.total_vaccinations} delay={0}>
+                                    {({ countUpRef }) => (
+                                        <h1 className="vaccine-card-numbers">
+                                            <span ref={countUpRef} />
+                                        </h1>
+                                    )}
+                                </CountUp>
                                 <div className="type-border d-flex"></div>
                             </div>
                     </div>
                     <div className="vaccine-card-box">
                             <h5 className="vaccine-card-box-heading">Daily per million</h5>
-                            {/* <h1>2923</h1> */}
-                            <h1>{props.vaccineStatus.daily_vaccinations_per_million}</h1>
+                            <CountUp start={0} end={props.vaccineStatus.daily_vaccinations_per_million} delay={0}>
+                            {({ countUpRef }) => (
+                                <h1>
+                                    <span ref={countUpRef} />
+                                </h1>
+                            )}
+                        </CountUp>
                     </div>
                 </div>
             </div>{/* HEADER CARD  */}
-            {/* {props.loading?null:} */}
-            {/* <UserLocation loading={props.loading} onSetLoading={props.onSetLoading} userLocation={geoLocation} token={props.token}/> */}
         </div>
     )
 }

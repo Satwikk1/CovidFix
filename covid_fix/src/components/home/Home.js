@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
-
 import './Home.css';
 
-import Navbar from '../../Navbar';
+import Navbar from '../common/Navbar/Nav';
 import Footer from '../common/Footer/Footer';
+import Fade from 'react-reveal/Fade'
 import Covid_Data_Header from './home_comp/Covid_Data_Header';
-
 import { Header } from './home_comp/header';
 import { Prevention } from './home_comp/prevention';
 import { About } from './home_comp/about';
@@ -22,7 +21,9 @@ const App = () => {
     <div>
       <Navbar />
       <Header data={landingPageData.Header} />
-      <Covid_Data_Header />
+      <Fade>
+        <Covid_Data_Header />
+      </Fade>
       <Prevention data={landingPageData.Prevention} />
       <About data={landingPageData.About} />
       <Symptoms data={landingPageData.Symptoms} />

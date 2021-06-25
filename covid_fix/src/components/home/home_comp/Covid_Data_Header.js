@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import '../index.css'
+import CountUp from "react-countup"
 
 export default class Covid_Data_Header extends React.Component {
   
@@ -29,73 +31,95 @@ export default class Covid_Data_Header extends React.Component {
 
   render() {
     return (
-      <div id='portfolio' className='text-center'>
-        <div className='container'>
+
+        <div className='my-5 container text-center'>
           <div className='section-title'>
             <h2>Current Cases</h2>
           </div>
-          <div className='row'>
-            <div className='portfolio-items' style={{display: "inline-flex", paddingLeft: "120px"}}>
 
-              <div style={{  }} >
-                <div className='portfolio-item' style={{marginLeft: "40%"}}>
-                  {/* <img
-                    src=''
-                    className='img-responsive'
-                    alt='Project Title'
-                  /> */}
-                  <h3>Total Confirmed</h3>
-                  <h4>{ this.state.totalconfirmed }</h4>
-                  
-                </div>
+          <div className='row mx-5' style={{}}>
+
+            <div className="col" style={{  }} >
+              <div className='mx-auto card total-confirmed' style={{minHeight: "15em", maxWidth: "13em"}}>
+                {/* <img
+                  src=''
+                  className='img-responsive'
+                  alt='Project Title'
+                /> */}
+                <h3 className="mt-4" style={{color: "#CD113B"}}>Total Confirmed</h3>
+                <CountUp start={0} end={this.state.totalconfirmed} delay={0}>
+                      {({ countUpRef }) => (
+                          <h2 className="mt-2" style={{color: "#CD113B"}}>
+                              <span ref={countUpRef} />
+                          </h2>
+                      )}
+                </CountUp>
+                
               </div>
-
-              <div className='col-sm-6 col-md-4 col-lg-4'>
-                <div className='portfolio-item' style={{marginLeft: "40%"}}>
-                  {/* <img
-                    src=''
-                    className='img-responsive'
-                    alt='Project Title'
-                  /> */}
-                  <h3>Total Active</h3>
-                  <h4>{ this.state.totalactive }</h4>
-                  
-                </div>
-              </div>
-
-              <div className='col-sm-6 col-md-4 col-lg-4'>
-                <div className='portfolio-item' style={{marginLeft: "40%"}}>
-                  {/* <img
-                    src=''
-                    className='img-responsive'
-                    alt='Project Title'
-                  /> */}
-                  <h3>Total Recovered</h3>
-                  <h4>{ this.state.totalrecovered }</h4>
-                  
-                </div>
-              </div>
-
-              <div className='col-sm-6 col-md-4 col-lg-4'>
-                <div className='portfolio-item' style={{marginLeft: "40%"}}>
-                  {/* <img
-                    src=''
-                    className='img-responsive'
-                    alt='Project Title'
-                  /> */}
-                  <h3>Total Deceased</h3>
-                  <h4>{ this.state.totaldeceased }</h4>
-                  
-                </div>
-              </div>
-
-            
             </div>
 
+            <div className='col'>
+              <div className='mx-auto card total-active' style={{minHeight: "15em", maxWidth: "13em"}}>
+                {/* <img
+                  src=''
+                  className='img-responsive'
+                  alt='Project Title'
+                /> */}
+                <h3 className="mt-4" style={{color: "#00917C"}}>Total Active</h3>
+                <CountUp start={0} end={this.state.totalactive} delay={0}>
+                      {({ countUpRef }) => (
+                          <h2 className="mt-2" style={{color: "#00917C"}}>
+                              <span ref={countUpRef} />
+                          </h2>
+                      )}
+                </CountUp>
+                
+              </div>
+            </div>
+
+            <div className='col'>
+              <div className='mx-auto card total-recovered' style={{minHeight: "15em", maxWidth: "13em"}}>
+                {/* <img
+                  src=''
+                  className='img-responsive'
+                  alt='Project Title'
+                /> */}
+                <h3 className="mt-4" style={{color: "#185ADB"}}>Total Recovered</h3>
+                <CountUp start={0} end={this.state.totalrecovered} delay={0}>
+                      {({ countUpRef }) => (
+                          <h2 className="mt-2" style={{color: "#185ADB"}}>
+                              <span ref={countUpRef} />
+                          </h2>
+                      )}
+                </CountUp>
+                
+              </div>
+            </div>
+
+            <div className='col'>
+              <div className='mx-auto card total-deceased' style={{minHeight: "15em", maxWidth: "13em"}}>
+                {/* <img
+                  src=''
+                  className='img-responsive'
+                  alt='Project Title'
+                /> */}
+                <h3 className="mt-4" style={{color: "#393E46"}}>Total Deceased</h3>
+                <CountUp start={0} end={this.state.totaldeceased} delay={0}>
+                      {({ countUpRef }) => (
+                          <h2 className="mt-2" style={{color: "#393E46"}}>
+                              <span ref={countUpRef} />
+                          </h2>
+                      )}
+                </CountUp>
+                
+              </div>
+            </div>
+
+            
           </div>
+
         </div>
 
-    </div>
     )
 }
 }

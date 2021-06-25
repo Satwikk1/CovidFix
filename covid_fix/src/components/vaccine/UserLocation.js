@@ -34,8 +34,8 @@ const UserLocation = (props) => {
                 src={'https://www.google.com/maps/embed/v1/place?key='+props.token+'&q='+props.userLocation.latitude+','+props.userLocation.longitude}>
             </iframe>
             <div className="centers-nearby">
-                <h1 className="mb-4">Vaccination centers near you</h1>
-                <h1 style={{fontSize: "100px"}}>{CardLength}</h1>
+                <h1 style={{color: "black"}} className="mb-4">Vaccination centers near you</h1>
+                <h1 style={{fontSize: "5rem", color: "black"}}>{CardLength}</h1>
             </div>
         </div>
     )

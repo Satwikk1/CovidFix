@@ -1,7 +1,7 @@
 @import url("../common/font/webfontkit-20210621-054519/stylesheet.css");
 
 .app-header {
-  background-color: rgb(238, 227, 130);
+  background-color: #00ead3;
   border-radius: 0.8em;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .vaccine-card-box-heading {
-  color: white;
+  color: #39a2db;
 }
 .vaccine-card-numbers {
   /* font-family: "Bungee", cursive; */
@@ -27,7 +27,7 @@
   width: 1px;
   height: 30px;
   margin-top: 10px;
-  background-color: black;
+  background-color: #005f99;
 }
 .type-border {
   width: 1px;

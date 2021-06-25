@@ -1,0 +1,18 @@
+.treatment {
+  border-radius: 1em;
+  background-color: #293b5f;
+  color: white;
+}
+.slider-btn {
+  border-radius: 50%;
+  background-color: #dbe6fd;
+  padding: 10px;
+  width: 43px;
+  color: black;
+}
+.carousel-control-next {
+  width: 5%;
+}
+.carousel-control-prev {
+  width: 5%;
+}

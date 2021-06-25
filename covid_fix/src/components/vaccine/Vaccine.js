@@ -3,6 +3,7 @@ import VaccineStatus from './VaccineStatus';
 import UserLocation from './UserLocation';
 import Centers from './Centers';
 import Navigation from '../common/Navbar/Nav'
+import Footer from '../common/Footer/Footer'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -13,6 +14,7 @@ import axios from 'axios';
 const Vaccine = (props) => {
 
     const [VaccineData, setVaccineData] = useState({})
+    const [fVaccineData, setFVaccineData] = useState(false);
     const [CenterDetails, setCenterDetails] = useState([])
     const [fCenterDetails, setFCenterDetails] = useState(false)
     const [userLocation, setUserLocation] = useState({})
@@ -23,6 +25,7 @@ const Vaccine = (props) => {
     useEffect(() => {
         axios.get("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json").then((res)=>{
             setVaccineData(res.data[94].data[res.data[94].data.length-1]);
+            setFVaccineData(true);
         }).catch((err)=>{
             alert(err)
         })
@@ -31,9 +34,7 @@ const Vaccine = (props) => {
     return(
         <div>
              <Navigation />
-             {/* {Loading? null: } */}
-             
-             <VaccineStatus FuserLocation={setFuserLocation} onSetUserLocation={setUserLocation} vaccineStatus={VaccineData} token={ApiToken}/>
+             {fVaccineData? <VaccineStatus FVaccineData={fVaccineData} FuserLocation={setFuserLocation} onSetUserLocation={setUserLocation} vaccineStatus={VaccineData} token={ApiToken}/>: null}
              {fuserLocation? <UserLocation onSetLoading={setLoading} onSetCenterDetails={setCenterDetails} onSetFCenterDetails={setFCenterDetails} userLocation={userLocation} token={ApiToken} /> : null}
              {fCenterDetails? <Centers token={ApiToken} centerDetails={CenterDetails} /> : null}
              {Loading? 
@@ -43,6 +44,7 @@ const Vaccine = (props) => {
                     </div>
                 </div> 
             :null}
+            {Loading? null: <Footer />}
         </div>
        
     )
