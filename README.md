@@ -1,4 +1,7 @@
 # CovidFix
+
+## Hosted Site - https://covidfix-f3ada.firebaseapp.com/
+
 <hr></hr>
 <img src="https://github.com/Satwikk1/CovidFix/blob/main/images/1.jpeg">
 <h3>
@@ -35,9 +38,9 @@ It provides you with:
 <img src="https://github.com/Satwikk1/CovidFix/blob/main/images/6.jpeg">
 
   
-# Packages
+# Instructions to Run the project
 
-1. "npm install react-router-dom" :- for handeling routes.
-2. "npm install axios"
-3. "npm install jsdom"
-4. "npm install react-reveal"
+1) git clone https://github.com/Satwikk1/CovidFix.git
+2) cd CovidFix
+3) npm install
+4) npm start
